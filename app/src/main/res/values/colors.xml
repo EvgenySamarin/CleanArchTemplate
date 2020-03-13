@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+BACKLOG colorize your app here
+
+Color resources name based on https://www.htmlcsscolor.com
+
+Color naming convention should satisfy following template. It need for simple changing of app colors
+
+[THEME]_<AREA>_<TYPE>_[NUANCE]_[ELEMENT]
+where:
+    [] - sign of optionality
+    THEME - name of global color schema (light, dark etc)
+    AREA - top of scope (may be text, background, icons, stroke etc)
+    TYPE - various type of color accent, strongly recommend to limit it by three (otherwise here
+        will be a lot of code). May be base, secondary, accent, error or others
+    NUANCE - responsible for different color shade of base color (light, dark, semilight etc)
+    ELEMENT - a specific element which consume custom color (for elements outside the common style)
+
+Blocks of palette separate by two empty line for better readability
+
+ @author EvgenySamarin
+ @since 20190905 v3
+-->
+<resources>
+    <!-- Base app color -->
+    <color name="colorPrimaryDark">@color/background_base_dark</color>
+    <color name="colorPrimary">@color/background_base</color>
+    <color name="colorAccent">@color/background_accent</color>
+
+
+    <!-- text palette -->
+    <color name="text_base">@color/nero</color>
+    <color name="text_secondary">@color/grey</color>
+
+
+    <!-- background palette -->
+    <color name="background_base">@color/mantis</color>
+    <color name="background_base_dark">@color/limeade</color>
+    <color name="background_base_light">@color/frostee</color>
+    <color name="background_accent">@color/ironstone</color>
+    <color name="background_base_splashscreen">@color/white</color>
+
+
+    <!-- stroke palette -->
+    <color name="stroke_base">@color/silver</color>
+
+
+    <!-- icons palette -->
+    <color name="icons_base">@color/nero</color>
+
+
+    <!--  canonical colors -->
+    <color name="mantis">#8BC34A</color>
+    <color name="limeade">#689F38</color>
+    <color name="frostee">#DCEDC8</color>
+    <color name="ironstone">#795548</color>
+    <color name="nero">#212121</color>
+    <color name="grey">#757575</color>
+    <color name="silver">#BDBDBD</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

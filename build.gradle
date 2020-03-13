@@ -1,0 +1,130 @@
+ext {
+    /** external libraries block */
+    okhttp3_logger_version = '4.4.0' //for logging http requests
+    timber_version = '4.7.1' //for app logging anywhere
+    kotlin_coroutines_version = '1.3.4' //for create async methods
+    retrofit2_version = '2.7.2' //for handling http requests
+    kotlin_serialization_runtime_version = '0.20.0' //for JSON serialization
+    kotlin_serialization_converter_version = '0.5.0' //a simple serializer for retrofit
+    material_version = '1.2.0-alpha05' //for support material layouts
+    architecture_components_version = '2.3.0-alpha03' //for support architecture components
+    lifecycle_version = '2.2.0' //for support lifecycle of "viewModel" and others
+    dagger_version = '2.26' //for dependencies injection
+    glide_version = '4.11.0' //for image handling
+    room_version = '2.2.4' //for support a room ORM
+    paging_version = '2.1.1' //for support pagination of lists
+    permission_utils_version = '1.0.9' // for support permission handling
+
+
+    /** base android libraries block */
+    appcompat_version = '1.1.0' //for legacy android version support
+    kotlin_ktx_version = '1.2.0' //for support kotlin ktx features
+    kotlin_version = '1.3.70' //for support kotlin language
+    constraint_version = "1.1.3" //for support "standard layout
+
+
+    /** testing block */
+    mockito_version = "3.0.0" //for build of mock class into your app tests
+    junit_version = "4.12" //for testing your app
+    android_junit_version = '1.1.1' //for testing your app
+    espresso_version = '3.2.0' //for instrumentation testing your app
+
+    libraries = [
+            //logging
+            "com.squareup.okhttp3:logging-interceptor:$okhttp3_logger_version",
+            "com.jakewharton.timber:timber:$timber_version",
+
+            //asynchronous and multithreading
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version",
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version",
+
+            //http requests and another
+            "com.squareup.retrofit2:retrofit:$retrofit2_version",
+            "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlin_serialization_runtime_version",
+            "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$kotlin_serialization_converter_version",
+
+            //dependency injection
+            "com.google.dagger:dagger:$dagger_version",
+            "com.google.dagger:dagger-android:$dagger_version",
+            "com.google.dagger:dagger-android-support:$dagger_version",
+
+            //design
+            "com.google.android.material:material:$material_version",
+
+            //media handling
+            "com.github.bumptech.glide:glide:$glide_version",
+
+            //architecture components
+            "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            "androidx.navigation:navigation-fragment:$architecture_components_version",
+            "androidx.navigation:navigation-ui:$architecture_components_version",
+            "androidx.navigation:navigation-fragment-ktx:$architecture_components_version",
+            "androidx.navigation:navigation-ui-ktx:$architecture_components_version",
+            "androidx.paging:paging-runtime:$paging_version",
+
+            //database
+            "androidx.room:room-runtime:$room_version",
+            "androidx.room:room-ktx:$room_version",
+
+            //permissions
+            "com.github.kayvannj:PermissionUtils:$permission_utils_version"
+    ]
+
+    librariesKapt = [
+            "androidx.room:room-compiler:$room_version",
+            "com.google.dagger:dagger-compiler:$dagger_version",
+            "com.google.dagger:dagger-android-processor:$dagger_version",
+    ]
+
+    librariesBase = [
+            "androidx.appcompat:appcompat:$appcompat_version",
+            "androidx.core:core-ktx:$kotlin_ktx_version",
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            "androidx.constraintlayout:constraintlayout:$constraint_version"
+    ]
+
+    testLibraries = [
+            "junit:junit:$junit_version",
+            "org.mockito:mockito-core:$mockito_version"
+    ]
+
+    androidTestLibraries = [
+            "androidx.test.ext:junit:$android_junit_version",
+            "androidx.test.espresso:espresso-core:$espresso_version"
+    ]
+}
+
+buildscript {
+    ext {
+        kotlin_version = '1.3.70'
+        navigation_safe_args_version = '2.3.0-alpha03' // for support save arguments passing
+        gradle_version = '3.6.1'
+        dexcount_version = '1.0.2' // for count of dex methods
+    }
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$dexcount_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_safe_args_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

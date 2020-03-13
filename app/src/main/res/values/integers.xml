@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Файл содержит целочисленные переменные, как правило используется для указыания констант в других
+файлах ресурсов
+
+ @author EvgenySamarin [github](https://github.com/EvgenySamarin)
+ @since 20191129 v1
+-->
+<resources>
+    <integer name="anim_duration_medium">200</integer>
+</resources>

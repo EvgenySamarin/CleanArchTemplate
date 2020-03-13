@@ -1,0 +1,2 @@
+rootProject.name='CleanArchTemplate'
+include ':app'

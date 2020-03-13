@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Анимация элемента списка, выглядит как поочередное появление снизу.
+При создании анимации отталивался от статьи:
+https://proandroiddev.com/enter-animation-using-recyclerview-and-layoutanimation-part-1-list-75a874a5d213
+
+ @author EvgenySamarin [github](https://github.com/EvgenySamarin)
+ @since 20191129 v1
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+        android:duration="@integer/anim_duration_medium">
+
+    <translate
+            android:fromYDelta="50%p"
+            android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+            android:toYDelta="0" />
+
+    <alpha
+            android:fromAlpha="0"
+            android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+            android:toAlpha="1" />
+</set>

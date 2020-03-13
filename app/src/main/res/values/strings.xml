@@ -1,0 +1,69 @@
+<!--
+Файл содержит набор строковых констант, константы формируются по префиксам и записываются в
+верхнем регистре, с использованием snake_case.
+<WHAT>_<WHERE>_<DESCRIPTION>, где:
+    <WHAT> : Описывает тип используемой строковой константы. Может принимать след значения:
+        TITLE - заголовок, наименование
+        ACTION - описание действия
+        PLACEHOLDER - заполнитель (значение по умолчанию), применяется для указания подсказок в
+            полях ввода текста
+        HINT - подсказка
+        ERROR - ошибка
+        SERVICE - служебные слова или короткие словосочетания пишутся на англ. языке
+        STUB - заглушки для различных ситуаций, НЕ ДОЛЖНЫ ИСПОЛЬЗОВАТЬСЯ В РЕЛИЗЕ
+        DESC - описание контента используется для обеспечения доступности (слабовидящие люди)
+
+    <WHERE> : указывает на место/элемент к которому применяется константа
+        прим.: TITLE_MENU_ITEM_MAIN_WORD -> <WHAT>[TITLE]_<WHERE>[MENU_ITEM]_<DESCRIPTION>[MAIN]_WORD
+
+    <DESCRIPTION> : Применяется для однозначного указания на конкретный элемент или место применения
+        строковой константы
+
+ @author EvgenySamarin
+ @since 20190909 v2
+-->
+<resources>
+    <!-- BACKLOG name your app here -->
+    <!-- titles block -->
+    <string name="TITLE_APP_NAME">ExampleApp</string>
+    <string name="TITLE_TOOLBAR_MAIN">Главное окно</string>
+    <string name="TITLE_TOOLBAR_SECONDARY">Дополнительное окно</string>
+    <string name="TITLE_MENU_ITEM_MAIN">Главная страница</string>
+    <string name="TITLE_MENU_ITEM_SECONDARY">Дополнительное окно</string>
+    <string name="TITLE_TAB_ITEM_LEFT">Левый</string>
+    <string name="TITLE_TAB_ITEM_RIGHT">Правый</string>
+
+
+    <!-- placeholder block -->
+    <string name="PLACEHOLDER_EXAMPLE">Пример использования placeholder</string>
+
+
+    <!-- hint block -->
+    <string name="HINT_EXAMPLE">Укажите подсказку для свих элементов</string>
+
+
+    <!-- error block -->
+    <string name="ERROR_BASE_COMMON">Общая ошибка</string>
+    <string name="ERROR_BASE_NO_CONNECTION">Нет подключения к серверу</string>
+    <string name="ERROR_BASE_LOCAL_CACHE_CONNECT">Проблема с обращением к локальному хранилищу</string>
+    <string name="ERROR_BASE_NO_CONTENT_ERROR">Даные отсутствуют</string>
+    <string name="ERROR_BASE_JSON_PARSING">Проблема с преобразованием JSON в DTO</string>
+    <string name="ERROR_BASE_FILE_PICK">Ошибка при обработке файла, попробуйте еще раз</string>
+
+
+    <!-- action block -->
+    <string name="ACTION_EXAMPLE">Пример события</string>
+
+
+    <!-- content description block for support accessibility -->
+    <string name="DESC_IMAGE">Изображение</string>
+
+
+    <!-- service block не подлежат переводу при локализации -->
+    <string name="SERVICE_IMG_DESC">image</string>
+
+
+    <!--stub block for hardcode-->
+    <!-- CLEARME remove all using before release -->
+    <string name="STUB_EXAMPLE">Заголовок</string>
+</resources>

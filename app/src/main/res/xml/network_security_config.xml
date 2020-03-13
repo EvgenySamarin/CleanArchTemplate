@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+BACKLOG here you should configure a network policy for unsafe resources
+its need for android N and above
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">some.unsafe.resource</domain>
+    </domain-config>
+</network-security-config>

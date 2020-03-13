@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Splash theme -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <!-- set style for drawer_menu -->
+    <style name="DrawerMenuStyle">
+        <item name="android:colorControlHighlight">@color/background_accent</item>
+    </style>
+
+    <!-- tabs style -->
+    <style name="NavigationTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+    BACKLOG here you should configured a backup app files
+    Exclude specific shared preferences that contain GCM registration Id
+     -->
+    <exclude domain="file" path="." />
+    <exclude domain="database" path="." />
+    <exclude domain="sharedpref" path="." />
+    <exclude domain="external" path="." />
+    <exclude domain="root" path="." />
+</full-backup-content>
